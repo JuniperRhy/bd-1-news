@@ -1,38 +1,978 @@
-.App {
+* {
+  padding: 0;
+}
+
+h1 {
+  color: rgb(224, 255, 255);
+  font-size: 3rem;
+  text-shadow: 0 0 70px rgb(122, 217, 255);
+  align-self: center;
   text-align: center;
+  text-decoration: underline rgb(58, 58, 58);
+
+  -webkit-text-stroke-width: 1px;
+
+  background: radial-gradient(#71e3ff, #dbf4ffb0, #b7e8ff18);
+  border-radius: 5px;
+  margin-bottom: 0rem;
+  padding: 0.5rem;
+  padding-bottom: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.OuterMost {
+  animation: AppFadeIn 4s linear 0s 1 forwards;
+  overflow: hidden;
+  height: 100vh;
+
+  /* align-items: center */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  top: 0;
+  margin-top: 12vh;
+  padding-bottom: 10vh;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 449px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .BDStandard {
+    margin-top: -15rem;
+    margin-right: 15rem;
+    margin-left: -38rem;
+    transform: scale(0.45);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 52vw;
+    height: 60vh;
+    margin-top: 2vh;
+    margin-left: -24vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    position: absolute;
+    height: 5rem;
+    right: -20rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+
+    z-index: 5;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.2rem;
+  }
+
+  .NewsFeedOn p {
+    color: rgb(66, 66, 66);
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 549px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .BDStandard {
+    margin-top: -15rem;
+    margin-right: 15rem;
+    margin-left: -32rem;
+    transform: scale(0.45);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 55vw;
+    height: 60vh;
+    margin-top: 2vh;
+    margin-left: -20vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    position: absolute;
+    height: 5rem;
+    right: -20rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+
+    z-index: 5;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
+
+  .NewsFeedOn p {
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -32.5rem;
+    transform: scale(0.65);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: -15vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    position: absolute;
+    height: 5rem;
+    right: -25rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+
+    z-index: 5;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 2rem;
+  }
 }
 
-@keyframes App-logo-spin {
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -26rem;
+    transform: scale(0.65);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: -7vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    position: absolute;
+    height: 5rem;
+    right: -35rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+
+    z-index: 5;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 878px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .BDStandard {
+    margin-top: -20rem;
+    margin-right: 15rem;
+    margin-left: -20rem;
+    transform: scale(0.75);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: 2vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 2rem;
+  }
+
+  .NewsFeedOn p {
+    font-size: 1rem;
+  }
+  .App button {
+    position: absolute;
+    height: 5rem;
+    right: -40rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+
+    z-index: 5;
+  }
+}
+
+@media only screen and (min-width: 879px) and (max-width: 1024px) {
+  .BDStandard {
+    margin-top: -20rem;
+    margin-right: 15rem;
+    margin-left: -20rem;
+    transform: scale(0.75);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: 6vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 2rem;
+  }
+
+  .NewsFeedOn p {
+    font-size: 1rem;
+  }
+  .App button {
+    position: absolute;
+    height: 5rem;
+    right: -40rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+
+    z-index: 5;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1149px) {
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -19rem;
+    transform: scale(0.85);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 45vh;
+    margin-top: 0vh;
+    margin-left: 2vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    height: 5rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+    margin-left: 5rem;
+    margin-right: 3rem;
+    margin-top: 10rem;
+    z-index: 5;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1299px) {
+  .BDStandard {
+    margin-top: -25rem;
+    margin-right: 15rem;
+    margin-left: -15rem;
+    transform: scale(0.85);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 45vh;
+    margin-top: 0vh;
+    margin-left: 2vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    height: 5rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+    margin-left: 10rem;
+    margin-top: 10rem;
+    z-index: 5;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1499px) {
+  .BDStandard {
+    margin-top: -29rem;
+    margin-right: 15rem;
+    margin-left: -6rem;
+    transform: scale(1);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: 6vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    height: 5rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+    margin-left: 10rem;
+    margin-top: 10rem;
+    z-index: 5;
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1649px) {
+  .BDStandard {
+    margin-top: -28rem;
+    margin-right: 15rem;
+    margin-left: 4rem;
+    transform: scale(0.95);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: 15vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    height: 5rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+    margin-left: 10rem;
+    margin-top: 10rem;
+    z-index: 5;
+  }
+}
+
+@media only screen and (min-width: 1650px) {
+  .BDStandard {
+    margin-top: -28rem;
+    margin-right: 15rem;
+    margin-left: 10rem;
+    transform: scale(0.95);
+    overflow: hidden;
+    z-index: 3;
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 50vh;
+    margin-top: 0vh;
+    margin-left: 15vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+
+    animation: NewsFeedFlicker 1s linear 0s infinite;
+    overflow-y: scroll;
+  }
+  .App button {
+    height: 5rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+    margin-left: 10rem;
+    margin-top: 10rem;
+    z-index: 5;
+  }
+}
+
+.NewsFeedOn::-webkit-scrollbar {
+  right: 10vw;
+  width: 0.5vw;
+}
+
+/* Track */
+.NewsFeedOn::-webkit-scrollbar-track {
+  background: radial-gradient(transparent 60%, hsla(0, 35%, 34%, 0.521));
+  box-shadow: inset 0 0 5px hsla(36, 100%, 51%, 1);
+  border-radius: 10px;
+}
+
+/* Handle */
+.NewsFeedOn::-webkit-scrollbar-thumb {
+  background: radial-gradient(hsla(0, 35%, 34%, 0.521) 60%, hsl(0, 35%, 34%));
+  border: hsla(36, 100%, 51%, 1);
+  box-shadow: inset 0 0 5px hsla(36, 100%, 51%, 1);
+  border-radius: 10px;
+  transition: 0.25s all 1s ease-in-out;
+}
+
+/* Handle on hover */
+.NewsFeedOn::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(
+    hsla(0, 35%, 34%, 0.521) 30%,
+    hsla(36, 100%, 51%, 1)
+  );
+  transition: 0.25s all 1s ease-in-out;
+}
+
+@keyframes AppFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.BDStandardBody {
+  cursor: pointer;
+}
+
+@keyframes squat {
+  0% {
+    opacity: 0;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.BDHop {
+  animation: bdHop 0.45s linear 0s 1 forwards;
+}
+@keyframes bdHop {
+  0% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-20rem);
+  }
+
+  98% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+}
+
+.HideBDHop {
+  animation: bdHop2 0.45s linear 0s 1 forwards;
+}
+
+@keyframes bdHop2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-20rem);
+  }
+
+  98% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+}
+
+.HideForHop {
+  animation: hideForHop 0.45s linear 0s 1 forwards;
+}
+
+@keyframes hideForHop {
+  0% {
+    opacity: 1;
+  }
+  2% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.HideForHop2 {
+  animation: hideForHop2 0.45s linear 0s 1 forwards;
+}
+
+@keyframes hideForHop2 {
+  0% {
+    opacity: 1;
+  }
+  2% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ProjectorNotPowerUp {
+  opacity: 0;
+}
+
+.ProjectorPowerUp {
+  animation: ProjectorPowerOn 0.05s ease 0s 5;
+}
+
+@keyframes ProjectorPowerOn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.ProjectorOn {
+  /* opacity: 1; */
+  transition: all 3s linear;
+  transition-delay: 3s;
+  animation: Projector 1.5s linear 0s infinite alternate;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+@keyframes Projector {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.55;
+  }
+  85% {
+    opacity: 0.75;
+  }
+
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ProjectorOff {
+  opacity: 0;
+  transition: all 10s linear 0s;
+}
+
+.NewsFeedVisible {
+  padding: 0rem;
+  margin: 0rem;
+  opacity: 1;
+  transition: all 4s linear 0s;
+  z-index: 2;
+}
+
+.NewsFeedInvisible {
+  opacity: 0;
+  transition: all 4s linear 0s;
+  z-index: 2;
+}
+
+.NewsFeedOn text {
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
+}
+
+.NewsFeedOff {
+  position: absolute;
+  width: 15vw;
+  height: 24vh;
+  margin-top: 0vh;
+  margin-left: 14vw;
+  /* border: solid 1px rgb(213, 243, 255); */
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 6rem;
+  border-bottom-left-radius: 3rem;
+  box-shadow: 0 0 50px rgb(122, 217, 255);
+  filter: drop-shadow(0 0 50px #fff);
+  padding: 4rem;
+  z-index: 2;
+  background: radial-gradient(#bcedfccb, #f3fcffb7, #92e6ffd7, #b1e6f87e);
+  opacity: 0;
+  transition: all 4s linear 0s;
+}
+
+@keyframes NewsFeedFlicker {
+  0% {
+    box-shadow: 0 0 50px rgb(198, 239, 255);
+    opacity: 1;
+  }
+  20% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 0.85;
+  }
+  50% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 0.85;
+  }
+  90% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 0.85;
+  }
+}
+
+@font-face {
+  font-family: Aurebesh;
+  src: url(./BD-1/englbesh.ttf);
+}
+
+@font-face {
+  font-family: StarJedi;
+  src: url(./BD-1/Starjedi.ttf);
 }

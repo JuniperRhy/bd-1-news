@@ -9,7 +9,6 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                 webkitTextStrokeColor: changeFont
                   ? "transparent"
                   : "rgb(219, 190, 24)",
-                color: changeFont ? "rgb(134, 116, 14)" : "rgb(66, 66, 66)",
               }}
             >
               Star Wars News
@@ -30,7 +29,6 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                 webkitTextStrokeColor: changeFont
                   ? "transparent"
                   : "rgb(219, 190, 24)",
-                color: changeFont ? "rgb(134, 116, 14)" : "rgb(66, 66, 66)",
               }}
             >
               Star Wars News

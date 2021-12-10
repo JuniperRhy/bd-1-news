@@ -2,8 +2,121 @@
   padding: 0;
 }
 
+.OuterMost {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  align-items: center;
+}
+
+.BDRunContainer {
+  position: absolute;
+  top: 10vh;
+  /* z-index: 4; */
+  animation: bdRunContainerHide 3s linear 0s 1;
+}
+
+@keyframes bdRunContainerHide {
+  0% {
+    z-index: 4;
+  }
+  99.9% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+.BDRun {
+  position: absolute;
+  top: -300vh;
+  animation: bdRun 3s linear 0s 1 forwards;
+}
+
+@keyframes bdRun {
+  0% {
+    left: -50vw;
+    transform: scale(0.05) rotate(10deg);
+  }
+  49% {
+    left: -190vw;
+    transform: scale(0.25) rotate(-10deg) scaleX(1);
+  }
+  50% {
+    left: -190vw;
+    transform: scale(0.35) rotate(10deg) scaleX(-1);
+  }
+
+  85% {
+    left: -65vw;
+    transform: scale(0.35) rotate(10deg) scaleX(-1) translateY(2vh);
+    opacity: 1;
+  }
+  85.9% {
+    left: -55vw;
+    transform: scale(0.3) rotate(-10deg) scaleX(1) translateY(2vh);
+    opacity: 1;
+  }
+  90% {
+    left: -90vw;
+    transform: scale(0.33) rotate(-5deg) scaleX(1) translateY(35vh);
+    opacity: 0.35;
+  }
+  99.9% {
+    left: -95vw;
+    transform: scale(0.35) rotate(10deg) scaleX(1) translateY(35vh);
+    opacity: 0.25;
+  }
+  100% {
+    left: -95vw;
+    transform: scale(0.35) rotate(0deg) scaleX(1) translateY(35vh);
+    opacity: 0;
+  }
+}
+
+.RunLeft {
+  animation: bdSteps 0.25s linear 0s infinite forwards;
+}
+
+.RunRight {
+  animation: bdSteps 0.25s linear 0.125s infinite forwards;
+}
+
+@keyframes bdSteps {
+  0% {
+    opacity: 0;
+  }
+  49.5% {
+    opacity: 0;
+  }
+  50.5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Non-IntroWapper {
+  animation: nonIntroHide 4.5s linear 0s 1;
+}
+
+@keyframes nonIntroHide {
+  0% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 h1 {
-  color: rgb(224, 255, 255);
+  color: rgba(238, 207, 31, 90%);
   font-size: 3rem;
   text-shadow: 0 0 70px rgb(122, 217, 255);
   align-self: center;
@@ -17,85 +130,81 @@ h1 {
   margin-bottom: 0rem;
   padding: 0.5rem;
   padding-bottom: 0;
-}
-
-.OuterMost {
-  animation: AppFadeIn 4s linear 0s 1 forwards;
-  overflow: hidden;
-  height: 100vh;
-
-  /* align-items: center */
-}
-
-.App {
-  margin-left: auto;
-  margin-right: auto;
+  z-index: top;
   position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  top: 0;
-  margin-top: 12vh;
-  padding-bottom: 10vh;
-  padding-top: 0.5rem;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  z-index: 1;
 }
 
 @media only screen and (max-width: 449px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   h1 {
     font-size: 1.5rem;
   }
   .BDStandard {
-    margin-top: -15rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -20rem;
     margin-right: 15rem;
-    margin-left: -38rem;
-    transform: scale(0.45);
-    overflow: hidden;
-    z-index: 3;
+    margin-left: -48rem;
+    transform: scale(0.75);
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
     color: rgb(0, 164, 230);
-    font-size: 1.25rem;
+    font-size: 2rem;
     text-shadow: 0 0 50px rgb(122, 217, 255);
     text-align: justify;
     text-justify: inter-word;
     text-transform: lowercase;
-    width: 52vw;
+    width: 60vw;
     height: 60vh;
     margin-top: 2vh;
-    margin-left: -24vw;
+    margin-left: -40vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
     position: absolute;
     height: 5rem;
-    right: -20rem;
+    right: -16.5rem;
+    margin-right: 4rem;
     max-width: 10rem;
     border: double 0.1rem rgba(218, 165, 32, 0.466);
     border-radius: 0.5rem;
     position: relative;
     color: rgb(255, 230, 0);
 
-    z-index: 5;
+    z-index: 3;
   }
+
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
     font-size: 1.2rem;
@@ -107,16 +216,33 @@ h1 {
   }
 }
 @media only screen and (min-width: 450px) and (max-width: 549px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   h1 {
     font-size: 2rem;
   }
   .BDStandard {
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
     margin-top: -15rem;
     margin-right: 15rem;
-    margin-left: -32rem;
-    transform: scale(0.45);
+    margin-left: -40rem;
+    transform: scale(0.75);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -135,16 +261,16 @@ h1 {
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -157,8 +283,9 @@ h1 {
     position: relative;
     color: rgb(255, 230, 0);
 
-    z-index: 5;
+    z-index: 3;
   }
+
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
     font-size: 1.5rem;
@@ -170,13 +297,30 @@ h1 {
   }
 }
 @media only screen and (min-width: 550px) and (max-width: 650px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -25rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -20rem;
     margin-right: 15rem;
-    margin-left: -32.5rem;
-    transform: scale(0.65);
+    margin-left: -35.5rem;
+    transform: scale(0.85);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -186,25 +330,25 @@ h1 {
     text-align: justify;
     text-justify: inter-word;
     text-transform: lowercase;
-    width: 50vw;
-    height: 50vh;
-    margin-top: 0vh;
+    width: 54vw;
+    height: 70vh;
+    margin-top: -4vh;
     margin-left: -15vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -217,7 +361,7 @@ h1 {
     position: relative;
     color: rgb(255, 230, 0);
 
-    z-index: 5;
+    z-index: 3;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -226,13 +370,30 @@ h1 {
 }
 
 @media only screen and (min-width: 650px) and (max-width: 767px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -25rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -15rem;
     margin-right: 15rem;
-    margin-left: -26rem;
-    transform: scale(0.65);
+    margin-left: -30rem;
+    transform: scale(0.85);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -243,37 +404,37 @@ h1 {
     text-justify: inter-word;
     text-transform: lowercase;
     width: 50vw;
-    height: 50vh;
-    margin-top: 0vh;
+    height: 70vh;
+    margin-top: -1vh;
     margin-left: -7vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
     position: absolute;
     height: 5rem;
-    right: -35rem;
+    right: -32rem;
     max-width: 10rem;
     border: double 0.1rem rgba(218, 165, 32, 0.466);
     border-radius: 0.5rem;
     position: relative;
     color: rgb(255, 230, 0);
 
-    z-index: 5;
+    z-index: 3;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -282,16 +443,33 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 878px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   .BDStandard {
-    margin-top: -20rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -15rem;
     margin-right: 15rem;
-    margin-left: -20rem;
-    transform: scale(0.75);
+    margin-left: -24rem;
+    transform: scale(0.85);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -301,25 +479,25 @@ h1 {
     text-align: justify;
     text-justify: inter-word;
     text-transform: lowercase;
-    width: 50vw;
-    height: 50vh;
+    width: 53vw;
+    height: 65vh;
     margin-top: 0vh;
-    margin-left: 2vw;
+    margin-left: -5vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .NewsFeedOn h1 {
@@ -333,25 +511,42 @@ h1 {
   .App button {
     position: absolute;
     height: 5rem;
-    right: -40rem;
+    right: -38rem;
     max-width: 10rem;
     border: double 0.1rem rgba(218, 165, 32, 0.466);
     border-radius: 0.5rem;
     position: relative;
     color: rgb(255, 230, 0);
 
-    z-index: 5;
+    z-index: 3;
   }
 }
 
 @media only screen and (min-width: 879px) and (max-width: 1024px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -20rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -15rem;
     margin-right: 15rem;
     margin-left: -20rem;
-    transform: scale(0.75);
+    transform: scale(0.9);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -361,25 +556,25 @@ h1 {
     text-align: justify;
     text-justify: inter-word;
     text-transform: lowercase;
-    width: 38vw;
-    height: 50vh;
-    margin-top: 0vh;
+    width: 45vw;
+    height: 70vh;
+    margin-top: -1vh;
     margin-left: 6vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .NewsFeedOn h1 {
@@ -393,25 +588,42 @@ h1 {
   .App button {
     position: absolute;
     height: 5rem;
-    right: -40rem;
+    right: -43rem;
     max-width: 10rem;
     border: double 0.1rem rgba(218, 165, 32, 0.466);
     border-radius: 0.5rem;
     position: relative;
     color: rgb(255, 230, 0);
 
-    z-index: 5;
+    z-index: 3;
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1149px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -25rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -12rem;
     margin-right: 15rem;
     margin-left: -19rem;
     transform: scale(0.85);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -421,8 +633,8 @@ h1 {
     text-align: justify;
     text-justify: inter-word;
     text-transform: lowercase;
-    width: 38vw;
-    height: 45vh;
+    width: 42vw;
+    height: 70vh;
     margin-top: 0vh;
     margin-left: 2vw;
     /* border: solid 1px rgb(213, 243, 255); */
@@ -430,16 +642,16 @@ h1 {
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -452,7 +664,7 @@ h1 {
     margin-left: 5rem;
     margin-right: 3rem;
     margin-top: 10rem;
-    z-index: 5;
+    z-index: 3;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -461,13 +673,30 @@ h1 {
 }
 
 @media only screen and (min-width: 1150px) and (max-width: 1299px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -25rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -12rem;
     margin-right: 15rem;
     margin-left: -15rem;
-    transform: scale(0.85);
+    transform: scale(0.9);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -477,25 +706,25 @@ h1 {
     text-align: justify;
     text-justify: inter-word;
     text-transform: lowercase;
-    width: 38vw;
-    height: 45vh;
-    margin-top: 0vh;
+    width: 43vw;
+    height: 70vh;
+    margin-top: -1vh;
     margin-left: 2vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -507,7 +736,7 @@ h1 {
     color: rgb(255, 230, 0);
     margin-left: 10rem;
     margin-top: 10rem;
-    z-index: 5;
+    z-index: 3;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -516,13 +745,30 @@ h1 {
 }
 
 @media only screen and (min-width: 1300px) and (max-width: 1499px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -29rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -12.5rem;
     margin-right: 15rem;
     margin-left: -6rem;
-    transform: scale(1);
+    transform: scale(0.95);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -533,7 +779,7 @@ h1 {
     text-justify: inter-word;
     text-transform: lowercase;
     width: 38vw;
-    height: 50vh;
+    height: 70vh;
     margin-top: 0vh;
     margin-left: 6vw;
     /* border: solid 1px rgb(213, 243, 255); */
@@ -541,16 +787,16 @@ h1 {
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -562,18 +808,35 @@ h1 {
     color: rgb(255, 230, 0);
     margin-left: 10rem;
     margin-top: 10rem;
-    z-index: 5;
+    z-index: 3;
   }
 }
 
 @media only screen and (min-width: 1500px) and (max-width: 1649px) {
+  .App {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    margin-top: 12vh;
+    padding-bottom: 10vh;
+    padding-top: 0.5rem;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index: 1;
+  }
   .BDStandard {
-    margin-top: -28rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -13rem;
     margin-right: 15rem;
     margin-left: 4rem;
     transform: scale(0.95);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -584,7 +847,7 @@ h1 {
     text-justify: inter-word;
     text-transform: lowercase;
     width: 38vw;
-    height: 50vh;
+    height: 70vh;
     margin-top: 0vh;
     margin-left: 15vw;
     /* border: solid 1px rgb(213, 243, 255); */
@@ -592,16 +855,16 @@ h1 {
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -613,18 +876,19 @@ h1 {
     color: rgb(255, 230, 0);
     margin-left: 10rem;
     margin-top: 10rem;
-    z-index: 5;
+    z-index: 3;
   }
 }
 
 @media only screen and (min-width: 1650px) {
   .BDStandard {
-    margin-top: -28rem;
-    margin-right: 15rem;
-    margin-left: 10rem;
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -34rem;
+    margin-right: 25rem;
+    margin-left: 23vw;
     transform: scale(0.95);
     overflow: hidden;
-    z-index: 3;
+    z-index: 2;
   }
   .NewsFeedOn {
     position: absolute;
@@ -635,24 +899,24 @@ h1 {
     text-justify: inter-word;
     text-transform: lowercase;
     width: 38vw;
-    height: 50vh;
-    margin-top: 0vh;
-    margin-left: 15vw;
+    height: 70vh;
+    margin-top: -35vh;
+    margin-left: 25vw;
     /* border: solid 1px rgb(213, 243, 255); */
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-right-radius: 15rem;
     border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     filter: drop-shadow(0 0 50px #fff);
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 4rem;
     z-index: 2;
-    background: radial-gradient(#bcedfccb, #92e6ffd7, #77e2ff8e, #fdfeff33);
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
 
-    animation: NewsFeedFlicker 1s linear 0s infinite;
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
     overflow-y: scroll;
   }
   .App button {
@@ -663,28 +927,119 @@ h1 {
     position: relative;
     color: rgb(255, 230, 0);
     margin-left: 10rem;
-    margin-top: 10rem;
-    z-index: 5;
+    margin-top: 25rem;
+    z-index: 3;
   }
+}
+
+@media only screen and (min-width: 1900px) {
+  .BDStandard {
+    animation: bdAppear ease-out 3s linear 0s 1 forwards;
+    margin-top: -34rem;
+    margin-right: 25rem;
+    margin-left: 30vw;
+    transform: scale(0.95);
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  @keyframes bdAppear {
+    0% {
+      visibility: hidden;
+    }
+    99% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+  .NewsFeedOn {
+    position: absolute;
+    color: rgb(0, 164, 230);
+    font-size: 1.25rem;
+    text-shadow: 0 0 50px rgb(122, 217, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    text-transform: lowercase;
+    width: 38vw;
+    height: 70vh;
+    margin-top: -35vh;
+    margin-left: 25vw;
+    /* border: solid 1px rgb(213, 243, 255); */
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 3rem;
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    filter: drop-shadow(0 0 50px #fff);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+    z-index: 2;
+    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
+
+    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
+    overflow-y: scroll;
+  }
+  .App button {
+    height: 5rem;
+    max-width: 10rem;
+    border: double 0.1rem rgba(218, 165, 32, 0.466);
+    border-radius: 0.5rem;
+    position: relative;
+    color: rgb(255, 230, 0);
+    margin-left: 10rem;
+    margin-top: 25rem;
+    z-index: 3;
+  }
+  .MuteButton {
+    transform: scale(0.25);
+    margin-top: -15vh;
+    padding: 0;
+    opacity: 0.25;
+  }
+}
+
+.MuteButton:hover {
+  filter: drop-shadow(0 0 50px rgb(157, 240, 255));
+  opacity: 1;
+}
+.MuteButton {
+  position: fixed;
+  transform: scale(0.25);
+  margin-left: -1rem;
+  margin-right: 0vw;
+  margin-top: 2vh;
+  margin-bottom: -10vh;
+
+  padding: 0;
+  opacity: 0.25;
+  z-index: 4;
+}
+
+h1 {
+  z-index: 3;
 }
 
 .NewsFeedOn::-webkit-scrollbar {
   right: 10vw;
-  width: 0.5vw;
+  width: 0.75vw;
 }
 
 /* Track */
 .NewsFeedOn::-webkit-scrollbar-track {
-  background: radial-gradient(transparent 60%, hsla(0, 35%, 34%, 0.521));
-  box-shadow: inset 0 0 5px hsla(36, 100%, 51%, 1);
+  background: radial-gradient(transparent 60%, rgba(255, 218, 5, 0.6));
+  box-shadow: inset 0 0 5px rgb(255, 218, 5, 0.75);
   border-radius: 10px;
 }
 
 /* Handle */
 .NewsFeedOn::-webkit-scrollbar-thumb {
-  background: radial-gradient(hsla(0, 35%, 34%, 0.521) 60%, hsl(0, 35%, 34%));
-  border: hsla(36, 100%, 51%, 1);
-  box-shadow: inset 0 0 5px hsla(36, 100%, 51%, 1);
+  background: radial-gradient(rgba(255, 230, 5, 0.39), rgb(255, 218, 1, 0.25));
+  border: rgb(255, 230, 5);
+  box-shadow: inset 0 0 5px rgb(255, 197, 1, 0.75);
   border-radius: 10px;
   transition: 0.25s all 1s ease-in-out;
 }
@@ -692,8 +1047,8 @@ h1 {
 /* Handle on hover */
 .NewsFeedOn::-webkit-scrollbar-thumb:hover {
   background: radial-gradient(
-    hsla(0, 35%, 34%, 0.521) 30%,
-    hsla(36, 100%, 51%, 1)
+    rgba(255, 209, 5, 0.692),
+    rgba(255, 230, 5, 0.849)
   );
   transition: 0.25s all 1s ease-in-out;
 }
@@ -819,12 +1174,20 @@ h1 {
   }
 }
 
+.ProjectorResize {
+  transform: scale(0.85) translateX(650px) translateY(420px);
+}
+
+.ProjectorResize2 {
+  transform: scale(0.85) translateX(450px) translateY(380px);
+}
+
 .ProjectorNotPowerUp {
   opacity: 0;
 }
 
 .ProjectorPowerUp {
-  animation: ProjectorPowerOn 0.05s ease 0s 5;
+  animation: ProjectorPowerOn 0.125s ease-in 0s 5;
 }
 
 @keyframes ProjectorPowerOn {
@@ -846,7 +1209,7 @@ h1 {
   /* opacity: 1; */
   transition: all 3s linear;
   transition-delay: 3s;
-  animation: Projector 1.5s linear 0s infinite alternate;
+  animation: Projector 1.5s linear 0.5s infinite alternate;
   animation: name duration timing-function delay iteration-count direction
     fill-mode;
 }
@@ -859,7 +1222,7 @@ h1 {
     opacity: 1;
   }
   50% {
-    opacity: 0.55;
+    opacity: 0.75;
   }
   55% {
     opacity: 1;
@@ -894,30 +1257,14 @@ h1 {
   padding: 0rem;
   margin: 0rem;
   opacity: 1;
-  transition: all 4s linear 0s;
+  transition: all 0.5s ease-out 0.625s;
   z-index: 2;
 }
 
 .NewsFeedInvisible {
   opacity: 0;
-  transition: all 4s linear 0s;
+  transition: all 1s ease-in 0s;
   z-index: 2;
-}
-
-.NewsFeedOn text {
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
 }
 
 .NewsFeedOff {
@@ -931,7 +1278,7 @@ h1 {
   border-top-left-radius: 3rem;
   border-bottom-right-radius: 6rem;
   border-bottom-left-radius: 3rem;
-  box-shadow: 0 0 50px rgb(122, 217, 255);
+  box-shadow: 0 0 80px rgb(122, 217, 255);
   filter: drop-shadow(0 0 50px #fff);
   padding: 4rem;
   z-index: 2;
@@ -946,33 +1293,33 @@ h1 {
     opacity: 1;
   }
   20% {
-    box-shadow: 0 0 50px rgb(122, 217, 255);
-    opacity: 0.85;
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 0.9;
   }
   50% {
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     opacity: 1;
   }
   70% {
-    box-shadow: 0 0 50px rgb(122, 217, 255);
-    opacity: 0.85;
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 0.9;
   }
   90% {
-    box-shadow: 0 0 50px rgb(122, 217, 255);
+    box-shadow: 0 0 80px rgb(122, 217, 255);
     opacity: 1;
   }
   100% {
     box-shadow: 0 0 50px rgb(122, 217, 255);
-    opacity: 0.85;
+    opacity: 0.9;
   }
 }
 
 @font-face {
   font-family: Aurebesh;
-  src: url(./BD-1/englbesh.ttf);
+  src: url(./Media/Fonts/englbesh.ttf);
 }
 
 @font-face {
   font-family: StarJedi;
-  src: url(./BD-1/Starjedi.ttf);
+  src: url(./Media/Fonts/Starjedi.ttf);
 }

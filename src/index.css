@@ -28,11 +28,13 @@ code {
       #00040e 60%,
       #000000 100%
     );
+    width: 100vw;
   }
 }
 
 @media only screen and (max-width: 1299px) {
   html {
     background: #000000 100%;
+    width: 100vw;
   }
 }

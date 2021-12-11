@@ -17,8 +17,13 @@
   animation: bdRunContainerHide 3s linear 0s 1;
 }
 
-.p {
-  font-size: 1rem;
+p {
+  font-size: 1.2rem;
+  color: goldenrod;
+}
+
+small {
+  text-decoration: underline double;
 }
 
 @keyframes bdRunContainerHide {
@@ -114,7 +119,7 @@
 }
 
 h1 {
-  color: rgba(238, 207, 31, 90%);
+  color: goldenrod;
   font-size: 3rem;
   text-shadow: 0 0 70px rgb(122, 217, 255);
   align-self: center;
@@ -128,10 +133,35 @@ h1 {
   margin-bottom: 0rem;
   padding: 0.5rem;
   padding-bottom: 0;
-  z-index: top;
+  z-index: 3;
   position: relative;
 }
 
+.NewsFeedOn {
+  position: absolute;
+  color: rgb(0, 164, 230);
+
+  text-shadow: 0 0 50px rgb(122, 217, 255);
+  text-align: justify;
+  text-justify: inter-word;
+  text-transform: lowercase;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 15rem;
+  border-bottom-left-radius: 3rem;
+  box-shadow: 0 0 80px rgb(122, 217, 255);
+  filter: drop-shadow(0 0 50px #fff);
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+  z-index: 2;
+  background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
+
+  animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 @media only screen and (max-width: 449px) {
   .BDRun {
     position: absolute;
@@ -167,33 +197,12 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 2rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 60vw;
     height: 60vh;
     margin-top: 2vh;
     margin-left: -40vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .App button {
     position: absolute;
@@ -254,33 +263,12 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 55vw;
     height: 60vh;
     margin-top: 2vh;
     margin-left: -20vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .App button {
     position: absolute;
@@ -341,33 +329,12 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 54vw;
     height: 70vh;
     margin-top: -4vh;
     margin-left: -15vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .App button {
     position: absolute;
@@ -426,33 +393,12 @@ h1 {
   }
 
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 50vw;
     height: 70vh;
     margin-top: -1vh;
     margin-left: -7vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .App button {
     position: absolute;
@@ -512,33 +458,12 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 53vw;
     height: 65vh;
     margin-top: 0vh;
     margin-left: -5vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -595,33 +520,12 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 45vw;
     height: 70vh;
     margin-top: -1vh;
     margin-left: 6vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -678,33 +582,17 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 42vw;
     height: 70vh;
     margin-top: 0vh;
     margin-left: 2vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
+  }
 
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
   }
   .App button {
     height: 5rem;
@@ -717,10 +605,6 @@ h1 {
     margin-right: 3rem;
     margin-top: 10rem;
     z-index: 3;
-  }
-  .NewsFeedOn h1 {
-    color: rgb(66, 66, 66);
-    font-size: 1.5rem;
   }
 }
 
@@ -757,33 +641,21 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 43vw;
     height: 70vh;
     margin-top: -1vh;
     margin-left: 2vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
+  }
 
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
   }
   .App button {
     height: 5rem;
@@ -795,10 +667,6 @@ h1 {
     margin-left: 10rem;
     margin-top: 10rem;
     z-index: 3;
-  }
-  .NewsFeedOn h1 {
-    color: rgb(66, 66, 66);
-    font-size: 1.5rem;
   }
 }
 
@@ -835,33 +703,16 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 38vw;
     height: 70vh;
     margin-top: 0vh;
     margin-left: 6vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
+  }
+  .NewsFeedOn h1 {
+    color: rgb(66, 66, 66);
+    font-size: 1.5rem;
   }
   .App button {
     height: 5rem;
@@ -910,37 +761,16 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
-    font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
+    font-size: 1.75rem;
     width: 38vw;
     height: 70vh;
     margin-top: 0vh;
     margin-left: 15vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .App button {
     height: 5rem;
@@ -971,37 +801,16 @@ h1 {
     z-index: 2;
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 38vw;
     height: 70vh;
     margin-top: -35vh;
     margin-left: 25vw;
     /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   .App button {
     height: 5rem;
@@ -1044,37 +853,15 @@ h1 {
     }
   }
   .NewsFeedOn {
-    position: absolute;
-    color: rgb(0, 164, 230);
     font-size: 1.25rem;
-    text-shadow: 0 0 50px rgb(122, 217, 255);
-    text-align: justify;
-    text-justify: inter-word;
-    text-transform: lowercase;
     width: 38vw;
     height: 70vh;
     margin-top: -35vh;
     margin-left: 25vw;
-    /* border: solid 1px rgb(213, 243, 255); */
-    border-top-right-radius: 3rem;
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 15rem;
-    border-bottom-left-radius: 3rem;
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    filter: drop-shadow(0 0 50px #fff);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 4rem;
-    z-index: 2;
-    background: radial-gradient(#bcedfcf5, #92e6ffd7, #77e2ffce, #fdfeffc4);
-
-    animation: NewsFeedFlicker 2s linear 0s infinite alternate-reverse;
-    overflow-y: scroll;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .App button {
     height: 5rem;
@@ -1114,20 +901,22 @@ h1 {
   z-index: 4;
 }
 
-h1 {
-  z-index: 3;
-}
-
 button {
   cursor: pointer;
 }
 
 li {
-  border: 1px solid rgb(0, 126, 175);
+  border: 1px solid rgb(136, 103, 19);
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
   box-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+li:hover {
+  border: 2px outset goldenrod;
+  padding: 1rem - 3px;
+  box-shadow: 0 0 50px rgb(255, 255, 255);
 }
 
 .NewsFeedOn h1 {
@@ -1146,10 +935,10 @@ img {
   height: auto;
 }
 
-img:hover {
+/* img:hover {
   border: 1px solid rgb(255, 217, 0);
   box-shadow: 0 0 50px rgb(255, 217, 0);
-}
+} */
 
 .NewsFeedOn::-webkit-scrollbar {
   right: 5vw;
@@ -1389,6 +1178,7 @@ img:hover {
 }
 
 .NewsFeedVisible {
+  display: visible;
   padding: 0rem;
   margin: 0rem;
   opacity: 1;
@@ -1397,18 +1187,21 @@ img:hover {
 }
 
 .NewsFeedInvisible {
+  display: hidden;
   opacity: 0;
   transition: all 1s ease-in 0s;
   z-index: 2;
 }
 
 .NewsFeedOn a {
-  color: rgb(0, 126, 175);
+  color: rgb(185, 145, 43);
+  text-shadow: 0 0 50px rgb(228, 228, 228);
   cursor: pointer;
+  text-decoration: underline double;
 }
 
 .NewsFeedOn a:hover {
-  color: rgb(12, 64, 85);
+  color: rgb(69, 80, 85);
   text-shadow: 0 0 50px rgb(255, 217, 0);
 }
 

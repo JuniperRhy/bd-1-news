@@ -106,7 +106,6 @@ function App() {
             webkitTextStrokeColor: changeFont
               ? "transparent"
               : "rgb(219, 190, 24)",
-            color: changeFont ? "rgb(238, 207, 31)" : "rgba(238, 207, 31, 90%)",
             zIndex: "top",
           }}
         >

@@ -23,6 +23,7 @@ import HoloOff from "./Media/audio/Holooff.mp3";
 import "./App.css";
 
 function App() {
+  const [swNewsData, setSwNewsData] = useState([]);
   const [isPageMuted, setIsPageMuted] = useState(true);
   const [isBDClicked, setIsBDClicked] = useState(false);
   const [isBDHover, setIsBDHover] = useState(false);
@@ -78,70 +79,6 @@ function App() {
   });
 
   window.scrollTo(0, 0);
-
-  const axios = require("axios");
-  const cheerio = require("cheerio");
-
-  // (async () => {
-  //   const args = process.argv.slice(2);
-  //   const postCode = args[0] || 2000;
-  //   const url = `https://www.domain.com.au/rent/?postcode=${postCode}&excludedeposittaken=1`;
-  //   try {
-  //     const response = await axios.get(url);
-  //     const $ = cheerio.load(response.data);
-  //     const noOfProperties = $("h1>strong").text();
-  //     console.log(
-  //       `${noOfProperties} are open for rent in ${postCode} postcode of Australia on Domain`
-  //     );
-  //   } catch (e) {
-  //     console.error(
-  //       `Error while fetching rental properties for ${postCode} - ${e.message}`
-  //     );
-  //   }
-  // })();
-
-  // const articleTagline = $(".cb-content").text();
-  // console.log(`tagline ${articleTagline} `);
-
-  // const articleHeader = $(".article-header");
-  // console.log(`tagline ${articleHeader} `);
-
-  // const articleTitles = $("article").text();
-  // console.log(`titles ${articleTitles} `);
-
-  // const articleText = $("item>div").text();
-  // console.log(`${articleText} `);
-
-  (async () => {
-    const url = `https://starwarsblog.starwars.com/`;
-    try {
-      const response = await axios.get(url);
-      const $ = cheerio.load(response.data);
-      // console.log(response.data);
-
-      /*
-      
-      function filter<cheerio.Element, cheerio.Element>(this: cheerio.Cheerio<...>, match: (index: number, value: cheerio.Element) => value is cheerio.Element): cheerio.Cheerio<...> (+1 overload)
-
-      Now we see why (h2) => h2 is a number
-
-      (index, h2) => boom
-
-      (method) Array<string>.filter<S>(predicate: (value: string, index: number, array: string[]) => value is S, thisArg?: any): S[] (+1 overload)
-
-      You can see in the standard filter the first parameter given to the callback is the value (the current element), then the index of it, then the whole array itself.
-
-
-
-      */ // <--- won't do any normal filter stuff, will just run our custom function and print 'I do what I want...'
-
-      const articleTitles = $("ul.news-articles>li");
-      const target = articleTitles.map((_index, li) => li.children);
-      console.log("Type of articleTitles: ", target);
-    } catch (e) {
-      console.error(`Error while fetching   - ${e.message}`);
-    }
-  })();
 
   console.log(isPageMuted);
 

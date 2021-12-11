@@ -3,7 +3,7 @@ import Stars from "./Stars";
 
 function Background() {
   return (
-    <div classname="background-container">
+    <div classame="background-container">
       <div className="starfield-A">
         <Stars />
       </div>

@@ -17,13 +17,24 @@
   animation: bdRunContainerHide 3s linear 0s 1;
 }
 
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  margin-top: 12vh;
+  padding-bottom: 10vh;
+  padding-top: 0.5rem;
+  z-index: 1;
+}
+
 p {
   font-size: 1.2rem;
   color: goldenrod;
-}
-
-small {
-  text-decoration: underline double;
 }
 
 @keyframes bdRunContainerHide {
@@ -120,21 +131,26 @@ small {
 
 h1 {
   color: goldenrod;
-  font-size: 3rem;
   text-shadow: 0 0 70px rgb(122, 217, 255);
   align-self: center;
   text-align: center;
   text-decoration: underline rgb(58, 58, 58);
 
-  -webkit-text-strokewidth: 1px;
+  -webkit-text-strokewidth: 4px;
 
   background: radial-gradient(#71e3ff, #dbf4ffb0, #b7e8ff18);
   border-radius: 5px;
   margin-bottom: 0rem;
   padding: 0.5rem;
-  padding-bottom: 0;
+  padding-bottom: 1.2rem;
   z-index: 3;
   position: relative;
+  /* margin-left: 10vw;
+  margin-right: 10vw; */
+}
+
+.Outline {
+  -webkit-text-stroke-color: rgb(58, 58, 58);
 }
 
 .NewsFeedOn {
@@ -162,6 +178,14 @@ h1 {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+.ProjectorResize {
+  transform: scale(0.85) translateX(650px) translateY(420px);
+}
+
+.ProjectorResize2 {
+  transform: scale(0.85) translateX(450px) translateY(380px);
+}
 @media only screen and (max-width: 449px) {
   .BDRun {
     position: absolute;
@@ -169,24 +193,9 @@ h1 {
     top: -380vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
@@ -226,30 +235,27 @@ h1 {
     color: rgb(66, 66, 66);
     font-size: 0.5rem;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 75vw;
+    top: 7vh;
+  }
+  .ProjectorResize {
+    transform: scale(0.65) translateX(1450px) translateY(980px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.65) translateX(1350px) translateY(940px);
+  }
 }
 @media only screen and (min-width: 450px) and (max-width: 549px) {
   .BDRun {
     position: absolute;
-    margin-left: -400vw;
-    top: -310vh;
+    margin-left: -4vw;
+    top: -420vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   h1 {
     font-size: 1.5rem;
   }
@@ -292,6 +298,18 @@ h1 {
     color: rgb(66, 66, 66);
     font-size: 0.85rem;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 75vw;
+    top: 7vh;
+  }
+  .ProjectorResize {
+    transform: scale(0.65) translateX(1450px) translateY(980px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.65) translateX(1350px) translateY(940px);
+  }
 }
 @media only screen and (min-width: 550px) and (max-width: 650px) {
   .BDRun {
@@ -300,23 +318,8 @@ h1 {
     top: -310vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
-  .h1 {
+
+  h1 {
     font-size: 1.55rem;
   }
   .BDStandard {
@@ -352,6 +355,18 @@ h1 {
     color: rgb(66, 66, 66);
     font-size: 1rem;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 79vw;
+    top: 7vh;
+  }
+  .ProjectorResize {
+    transform: scale(0.65) translateX(1450px) translateY(980px);
+  }
+
+  .ProjectorResize2 {
+    transform: scale(0.65) translateX(1350px) translateY(940px);
+  }
 }
 
 @media only screen and (min-width: 650px) and (max-width: 767px) {
@@ -362,25 +377,8 @@ h1 {
     animation: bdRun 3s linear 0s 1 forwards;
   }
 
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
-
-  .h1 {
-    font-size: 1.25rem;
+  h1 {
+    font-size: 1.5rem;
   }
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
@@ -420,6 +418,10 @@ h1 {
   .NewsFeedOn p {
     font-size: 0.85rem;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: -7vw;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 878px) {
@@ -429,24 +431,9 @@ h1 {
     top: -310vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   h1 {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
@@ -467,7 +454,7 @@ h1 {
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .NewsFeedOn p {
@@ -485,6 +472,10 @@ h1 {
 
     z-index: 3;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: -5vw;
+  }
 }
 
 @media only screen and (min-width: 879px) and (max-width: 1024px) {
@@ -494,22 +485,7 @@ h1 {
     top: -310vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
     margin-top: -15rem;
@@ -529,7 +505,7 @@ h1 {
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .NewsFeedOn p {
@@ -547,6 +523,10 @@ h1 {
 
     z-index: 3;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1149px) {
@@ -556,22 +536,7 @@ h1 {
     top: -310vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
     margin-top: -12rem;
@@ -606,6 +571,10 @@ h1 {
     margin-top: 10rem;
     z-index: 3;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width: 1150px) and (max-width: 1299px) {
@@ -615,22 +584,7 @@ h1 {
     top: -310vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
     margin-top: -12rem;
@@ -668,6 +622,10 @@ h1 {
     margin-top: 10rem;
     z-index: 3;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width: 1300px) and (max-width: 1499px) {
@@ -677,22 +635,7 @@ h1 {
     top: -310vh;
     animation: bdRun 3s linear 0s 1 forwards;
   }
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
+
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
     margin-top: -12.5rem;
@@ -725,6 +668,10 @@ h1 {
     margin-top: 10rem;
     z-index: 3;
   }
+  .MuteButton {
+    transform: scale(0.2);
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width: 1500px) and (max-width: 1649px) {
@@ -735,22 +682,6 @@ h1 {
     animation: bdRun 3s linear 0s 1 forwards;
   }
 
-  .App {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    margin-top: 12vh;
-    padding-bottom: 10vh;
-    padding-top: 0.5rem;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    z-index: 1;
-  }
   .BDStandard {
     animation: bdAppear ease-out 3s linear 0s 1 forwards;
     margin-top: -13rem;
@@ -770,7 +701,7 @@ h1 {
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1.2rem;
+    font-size: 1.75rem;
   }
   .App button {
     height: 5rem;
@@ -782,6 +713,10 @@ h1 {
     margin-left: 10rem;
     margin-top: 10rem;
     z-index: 3;
+  }
+  .MuteButton {
+    transform: scale(0.25);
+    margin-left: 0;
   }
 }
 
@@ -823,6 +758,10 @@ h1 {
     margin-top: 25rem;
     z-index: 3;
   }
+  .MuteButton {
+    transform: scale(0.25);
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width: 1900px) {
@@ -861,7 +800,7 @@ h1 {
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: 1rem;
+    font-size: 1.75rem;
   }
   .App button {
     height: 5rem;
@@ -877,36 +816,52 @@ h1 {
 
   .MuteButton {
     transform: scale(0.25);
-    margin-top: -15vh;
-    padding: 0;
-    opacity: 0.25;
-    cursor: pointer;
+    margin-left: 0;
   }
 }
 
-.MuteButton:hover {
-  filter: drop-shadow(0 0 50px rgb(157, 240, 255));
-  opacity: 1;
-}
 .MuteButton {
   position: fixed;
-  transform: scale(0.25);
-  margin-left: -1rem;
+  margin-top: 0vh;
   margin-right: 0vw;
-  margin-top: 3vh;
-  margin-bottom: -10vh;
+  margin-bottom: -8vh;
   cursor: pointer;
   padding: 0;
   opacity: 0.25;
   z-index: 4;
 }
 
+.MuteButton:hover {
+  filter: drop-shadow(0 0 50px rgb(157, 240, 255));
+  opacity: 1;
+}
+
 button {
   cursor: pointer;
 }
 
+.NewsFeedVisible {
+  visibility: visible;
+  padding: 0rem;
+  margin: 0rem;
+  opacity: 1;
+  transition: all 0.5s ease-out 0.9s;
+  z-index: 2;
+}
+
+.NewsFeedInvisible,
+.NewsFeedInvisible .NewsFeedOn a {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in 0s;
+  z-index: 2;
+}
+
 li {
-  border: 1px solid rgb(136, 103, 19);
+  border-top: 3px solid rgb(255, 194, 41);
+  border-bottom: 3px solid rgb(255, 194, 41);
+  border-left: 3px solid linearGradient(goldenrod, transparent, goldenrod);
+  border-right: 3px solid linearGradient(goldenrod, transparent, goldenrod);
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
@@ -914,9 +869,57 @@ li {
 }
 
 li:hover {
-  border: 2px outset goldenrod;
-  padding: 1rem - 3px;
+  border: 3px solid rgb(255, 194, 41);
+  padding-left: calc(1rem - 3px);
+  padding-right: calc(1rem - 3px);
   box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+
+.NewsFeedOff {
+  position: absolute;
+  width: 15vw;
+  height: 24vh;
+  margin-top: 0vh;
+  margin-left: 14vw;
+  /* border: solid 1px rgb(213, 243, 255); */
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 6rem;
+  border-bottom-left-radius: 3rem;
+  box-shadow: 0 0 80px rgb(122, 217, 255);
+  filter: drop-shadow(0 0 50px #fff);
+  padding: 4rem;
+  z-index: 2;
+  background: radial-gradient(#bcedfccb, #f3fcffb7, #92e6ffd7, #b1e6f87e);
+  opacity: 0;
+  transition: all 4s linear 0s;
+}
+
+@keyframes NewsFeedFlicker {
+  0% {
+    box-shadow: 0 0 50px rgb(198, 239, 255);
+    opacity: 1;
+  }
+  20% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 0.9;
+  }
+  90% {
+    box-shadow: 0 0 80px rgb(122, 217, 255);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 50px rgb(122, 217, 255);
+    opacity: 0.9;
+  }
 }
 
 .NewsFeedOn h1 {
@@ -925,14 +928,6 @@ li:hover {
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 0)
   );
-}
-
-img {
-  border: 1px solid rgb(0, 126, 175);
-  border-radius: 0.25rem;
-  box-shadow: 0 0 25px rgb(255, 255, 255);
-  width: 100%;
-  height: auto;
 }
 
 /* img:hover {
@@ -984,6 +979,32 @@ img {
   100% {
     opacity: 1;
   }
+}
+
+img {
+  border: 1px solid rgb(0, 126, 175);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 25px rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
+}
+
+.NewsFeedOn a {
+  color: rgb(185, 145, 43);
+  text-shadow: 0 0 50px rgb(228, 228, 228);
+  cursor: pointer;
+  text-decoration: underline double;
+}
+
+.NewsFeedOn a:hover {
+  color: rgb(69, 80, 85);
+  text-shadow: 0 0 50px rgb(255, 217, 0);
+}
+
+small {
+  font-size: 0.75rem;
+  text-decoration: underline double;
+  text-align: right;
 }
 
 .BDStandardBody {
@@ -1098,14 +1119,6 @@ img {
   }
 }
 
-.ProjectorResize {
-  transform: scale(0.85) translateX(650px) translateY(420px);
-}
-
-.ProjectorResize2 {
-  transform: scale(0.85) translateX(450px) translateY(380px);
-}
-
 .ProjectorNotPowerUp {
   opacity: 0;
 }
@@ -1175,85 +1188,6 @@ img {
 .ProjectorOff {
   opacity: 0;
   transition: all 10s linear 0s;
-}
-
-.NewsFeedVisible {
-  display: visible;
-  padding: 0rem;
-  margin: 0rem;
-  opacity: 1;
-  transition: all 0.5s ease-out 0.9s;
-  z-index: 2;
-}
-
-.NewsFeedInvisible {
-  display: hidden;
-  opacity: 0;
-  transition: all 1s ease-in 0s;
-  z-index: 2;
-}
-
-.NewsFeedOn a {
-  color: rgb(185, 145, 43);
-  text-shadow: 0 0 50px rgb(228, 228, 228);
-  cursor: pointer;
-  text-decoration: underline double;
-}
-
-.NewsFeedOn a:hover {
-  color: rgb(69, 80, 85);
-  text-shadow: 0 0 50px rgb(255, 217, 0);
-}
-
-small {
-  font-size: 0.75rem;
-}
-
-.NewsFeedOff {
-  position: absolute;
-  width: 15vw;
-  height: 24vh;
-  margin-top: 0vh;
-  margin-left: 14vw;
-  /* border: solid 1px rgb(213, 243, 255); */
-  border-top-right-radius: 3rem;
-  border-top-left-radius: 3rem;
-  border-bottom-right-radius: 6rem;
-  border-bottom-left-radius: 3rem;
-  box-shadow: 0 0 80px rgb(122, 217, 255);
-  filter: drop-shadow(0 0 50px #fff);
-  padding: 4rem;
-  z-index: 2;
-  background: radial-gradient(#bcedfccb, #f3fcffb7, #92e6ffd7, #b1e6f87e);
-  opacity: 0;
-  transition: all 4s linear 0s;
-}
-
-@keyframes NewsFeedFlicker {
-  0% {
-    box-shadow: 0 0 50px rgb(198, 239, 255);
-    opacity: 1;
-  }
-  20% {
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    opacity: 0.9;
-  }
-  50% {
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    opacity: 1;
-  }
-  70% {
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    opacity: 0.9;
-  }
-  90% {
-    box-shadow: 0 0 80px rgb(122, 217, 255);
-    opacity: 1;
-  }
-  100% {
-    box-shadow: 0 0 50px rgb(122, 217, 255);
-    opacity: 0.9;
-  }
 }
 
 @font-face {

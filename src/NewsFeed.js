@@ -85,6 +85,7 @@ export default function NewsFeed({ isBDClicked, changeFont }) {
                       "Posts by",
                       "article by"
                     )}
+                    <br />
                     {formattedArticle.byLineDate}
                   </small>
                 </p>

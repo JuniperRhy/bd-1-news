@@ -15,10 +15,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-const urls = ["a", "b", "c"];
-
-const getPromise = () =>
-  new Promise((resolve) => setTimeout(() => resolve("Butts"), 2000));
-
-const tests = urls.map(async () => await getPromise());

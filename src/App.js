@@ -99,15 +99,13 @@ function App() {
         <h1
           style={{
             background: changeFont
-              ? "rgba(85, 24, 24)"
-              : "radial-gradient(#71e3ff, #dbf4ffb0, #b7e8ff18)",
+              ? "radial-gradient(rgba(255, 237, 157, 0.459), #551818, #b7e8ff18,rgba(255, 237, 157, 0))"
+              : "radial-gradient(rgba(255, 237, 157, 0.459),rgba(255, 237, 157, 0.459),#71e3ff, #dbf4ffb0, #b7e8ff18,rgba(255, 237, 157, 0),rgba(255, 237, 157, 0))",
             marginTop: changeFont ? "0vh" : "1vh",
             marginBottom: changeFont ? "-11vh" : "-8vh",
-            webkitTextStrokeColor: changeFont
-              ? "transparent"
-              : "rgb(219, 190, 24)",
             zIndex: "top",
           }}
+          className={changeFont ? "" : "Outline"}
         >
           BD-1's Star Wars News Feed
         </h1>

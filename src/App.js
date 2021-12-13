@@ -23,7 +23,6 @@ import HoloOff from "./Media/audio/Holooff.mp3";
 import "./App.css";
 
 function App() {
-  const [swNewsData, setSwNewsData] = useState([]);
   const [isPageMuted, setIsPageMuted] = useState(true);
   const [isBDClicked, setIsBDClicked] = useState(false);
   const [isBDHover, setIsBDHover] = useState(false);
@@ -80,11 +79,7 @@ function App() {
 
   window.scrollTo(0, 0);
 
-  console.log(isPageMuted);
-
   return (
-    // <div className="AppWrapper">
-
     <div
       className="OuterMost"
       style={{ fontFamily: changeFont ? "StarJedi" : "Aurebesh" }}
@@ -98,9 +93,6 @@ function App() {
         <MuteButton isPageMuted={isPageMuted} setIsPageMuted={setIsPageMuted} />
         <h1
           style={{
-            background: changeFont
-              ? "radial-gradient(rgba(255, 237, 157, 0.459), #551818, #b7e8ff18,rgba(255, 237, 157, 0))"
-              : "radial-gradient(rgba(255, 237, 157, 0.459),rgba(255, 237, 157, 0.459),#71e3ff, #dbf4ffb0, #b7e8ff18,rgba(255, 237, 157, 0),rgba(255, 237, 157, 0))",
             marginTop: changeFont ? "0vh" : "1vh",
             marginBottom: changeFont ? "-11vh" : "-8vh",
             zIndex: "top",
@@ -142,9 +134,6 @@ function App() {
           </button>
 
           <NewsFeed isBDClicked={isBDClicked} changeFont={changeFont} />
-          {/* <div>
-        <BD1Squat isBDClicked={isBDClicked} setIsBDClicked={setIsBDClicked} />
-      </div> */}
           <div>
             <BDStandard
               changeFont={changeFont}
@@ -157,7 +146,6 @@ function App() {
         </div>
       </div>
     </div>
-    // </div>
   );
 }
 

@@ -609,17 +609,16 @@ h1 {
     top: -310vh;
   }
   .BDStandard {
-    margin-top: -34rem;
-    margin-right: 25rem;
-    margin-left: 23vw;
+    margin-top: -14rem;
+    margin-right: 20rem;
+    margin-left: 10vw;
     transform: scale(0.95);
   }
   .NewsFeedOn {
-    font-size: 1.25rem;
     width: 38vw;
     height: 70vh;
-    margin-top: -35vh;
-    margin-left: 25vw;
+    margin-top: 0vh;
+    margin-left: 15vw;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -627,7 +626,7 @@ h1 {
   }
   .App button {
     margin-left: 10rem;
-    margin-top: 25rem;
+    margin-top: 20rem;
   }
   .MuteButton {
     transform: scale(0.25);
@@ -640,9 +639,9 @@ h1 {
     top: -300vh;
   }
   .BDStandard {
-    margin-top: -34rem;
-    margin-right: 25rem;
-    margin-left: 30vw;
+    margin-top: -14rem;
+    margin-right: 20rem;
+    margin-left: 15vw;
     transform: scale(0.95);
   }
 
@@ -658,11 +657,10 @@ h1 {
     }
   }
   .NewsFeedOn {
-    font-size: 1.25rem;
     width: 38vw;
     height: 70vh;
-    margin-top: -35vh;
-    margin-left: 25vw;
+    margin-top: 0vh;
+    margin-left: 15vw;
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
@@ -670,7 +668,7 @@ h1 {
   }
   .App button {
     margin-left: 10rem;
-    margin-top: 25rem;
+    margin-top: 20rem;
   }
 
   .MuteButton {
@@ -795,29 +793,30 @@ li:hover {
 }
 
 .NewsFeedOn::-webkit-scrollbar-track {
-  background: radial-gradient(transparent 60%, rgba(255, 218, 5, 0.6));
-  box-shadow: inset 0 0 5px rgb(255, 218, 5, 0.75);
+  background: radial-gradient(transparent 60%, rgba(218, 165, 32, 0.692));
+  box-shadow: inset 0 0 5px rgba(218, 165, 32, 0.74);
   border-radius: 10px;
 }
 .NewsFeedOn::-webkit-scrollbar-track:hover {
-  background: radial-gradient(transparent 60%, rgba(255, 218, 5, 0.6));
+  background: radial-gradient(transparent 60%, rgba(218, 165, 32, 0.692));
+  border: solid 1px goldenrod;
   box-shadow: inset 0 0 5px rgb(255, 248, 207);
   border-radius: 10px;
 }
 
 .NewsFeedOn::-webkit-scrollbar-thumb {
-  background: radial-gradient(rgba(255, 230, 5, 0.39), rgb(255, 218, 1, 0.25));
-  border: rgb(255, 230, 5);
+  background: radial-gradient(
+    rgba(218, 165, 32, 0.452),
+    rgba(218, 165, 32, 0.692)
+  );
+  border: goldenrod;
   box-shadow: inset 0 0 5px rgb(255, 197, 1, 0.75);
   border-radius: 10px;
   transition: 0.25s all 1s ease-in-out;
 }
 
 .NewsFeedOn::-webkit-scrollbar-thumb:hover {
-  background: radial-gradient(
-    rgba(255, 209, 5, 0.692),
-    rgba(255, 230, 5, 0.849)
-  );
+  background: radial-gradient(rgba(255, 209, 5, 0.692), goldenrod);
   border: 1px solid rgb(97, 97, 97);
   transition: 0.25s all 1s ease-in-out;
 }

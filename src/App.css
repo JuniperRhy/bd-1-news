@@ -584,7 +584,7 @@ h1 {
   }
   .NewsFeedOn h1 {
     color: rgb(66, 66, 66);
-    font-size: relative;
+    font-size: 1.5rem;
   }
   .App button {
     margin-left: 10rem;

@@ -13,11 +13,12 @@
 .BDRunContainer {
   position: absolute;
   top: 10vh;
+  animation: bdRunContainerHide 3s linear 0s 1;
 }
 
 .BDRun {
-  overflow: hidden;
-  animation: bdRunContainerHide 3s linear 0s 1;
+  position: absolute;
+  animation: bdRun 3s linear 0s 1 forwards;
 }
 
 .App {
@@ -204,10 +205,8 @@ h1 {
 }
 @media only screen and (max-width: 449px) {
   .BDRun {
-    position: absolute;
     margin-left: -625vw;
     top: -380vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   h1 {
@@ -261,10 +260,8 @@ h1 {
 }
 @media only screen and (min-width: 450px) and (max-width: 549px) {
   .BDRun {
-    position: absolute;
     margin-left: -4vw;
     top: -420vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   h1 {
@@ -312,10 +309,8 @@ h1 {
 }
 @media only screen and (min-width: 550px) and (max-width: 650px) {
   .BDRun {
-    position: absolute;
     margin-left: -320vw;
     top: -280vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   h1 {
@@ -358,10 +353,8 @@ h1 {
 
 @media only screen and (min-width: 650px) and (max-width: 767px) {
   .BDRun {
-    position: absolute;
     margin-left: -250vw;
     top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   h1 {
@@ -400,10 +393,8 @@ h1 {
 
 @media only screen and (min-width: 768px) and (max-width: 878px) {
   .BDRun {
-    position: absolute;
     margin-left: -230vw;
     top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   h1 {
@@ -448,10 +439,8 @@ h1 {
 
 @media only screen and (min-width: 879px) and (max-width: 1024px) {
   .BDRun {
-    position: absolute;
     margin-left: -100vw;
     top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   .BDStandard {
@@ -486,10 +475,8 @@ h1 {
 
 @media only screen and (min-width: 1025px) and (max-width: 1149px) {
   .BDRun {
-    position: absolute;
     margin-left: -120vw;
     top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   .BDStandard {
@@ -523,10 +510,8 @@ h1 {
 
 @media only screen and (min-width: 1150px) and (max-width: 1299px) {
   .BDRun {
-    position: absolute;
     margin-left: -70vw;
     top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
 
   .BDStandard {
@@ -563,10 +548,8 @@ h1 {
 
 @media only screen and (min-width: 1300px) and (max-width: 1499px) {
   .BDRun {
-    position: absolute;
     margin-left: -60vw;
-    top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
+    top: -373vh;
   }
 
   .BDStandard {
@@ -606,10 +589,8 @@ h1 {
 
 @media only screen and (min-width: 1500px) and (max-width: 1649px) {
   .BDRun {
-    position: absolute;
     left: 50vw;
-    top: -330vh;
-    animation: bdRun 3s linear 0s 1 forwards;
+    top: -310vh;
   }
 
   .BDStandard {
@@ -640,9 +621,7 @@ h1 {
 
 @media only screen and (min-width: 1650px) and (max-width: 1899px) {
   .BDRun {
-    position: absolute;
     top: -310vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
   .BDStandard {
     margin-top: -34rem;
@@ -673,9 +652,7 @@ h1 {
 
 @media only screen and (min-width: 1900px) {
   .BDRun {
-    position: absolute;
     top: -300vh;
-    animation: bdRun 3s linear 0s 1 forwards;
   }
   .BDStandard {
     margin-top: -34rem;
@@ -894,9 +871,9 @@ img:hover {
   text-shadow: 0 0 50px rgb(255, 217, 0);
 }
 
-small {
+p small {
   font-size: 0.75rem;
-  text-decoration: underline double;
+  text-decoration: underline double 0.5px;
   text-align: right;
 }
 

@@ -67,29 +67,14 @@ p {
     transform: scale(0.35) rotate(10deg) scaleX(-1);
   }
 
-  85% {
-    left: -65vw;
+  95.9% {
+    left: -20vw;
     transform: scale(0.35) rotate(10deg) scaleX(-1) translateY(2vh);
     opacity: 1;
   }
-  85.9% {
-    left: -55vw;
-    transform: scale(0.3) rotate(-10deg) scaleX(1) translateY(2vh);
-    opacity: 1;
-  }
-  90% {
-    left: -90vw;
-    transform: scale(0.33) rotate(-5deg) scaleX(1) translateY(35vh);
-    opacity: 0.35;
-  }
-  99.9% {
-    left: -95vw;
-    transform: scale(0.35) rotate(10deg) scaleX(1) translateY(35vh);
-    opacity: 0.25;
-  }
   100% {
-    left: -95vw;
-    transform: scale(0.35) rotate(0deg) scaleX(1) translateY(35vh);
+    left: -20vw;
+    transform: scale(0.35) rotate(10deg) scaleX(-1);
     opacity: 0;
   }
 }

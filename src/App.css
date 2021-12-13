@@ -639,10 +639,10 @@ h1 {
     top: -300vh;
   }
   .BDStandard {
-    margin-top: -14rem;
+    margin-top: -7rem;
     margin-right: 20rem;
-    margin-left: 15vw;
-    transform: scale(0.95);
+    margin-left: 20vw;
+    transform: scale(1.2);
   }
 
   @keyframes bdAppear {
